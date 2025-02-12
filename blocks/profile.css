@@ -53,7 +53,7 @@
   border-radius: 8%;
   margin-top: auto;
   gap:8px;
-  font-family:"poppins",arial,sans-serif ;
+  font-family:"poppins",arial,sans-serif;
  }
 
 .profile__edit-button{
@@ -64,6 +64,7 @@
   font-family: "poppins",arial,sans-serif;
   display: flex;
   gap: 8px;
+  color:rgba(33,33,33,0.7);
 }
 
 @media screen and (max-width:840px) {
@@ -96,4 +97,13 @@ margin: 0 auto;
   margin: 20px 0;
   width: 288px;
 }
+}
+.profile__add-button:hover{
+  background-color: rgba(33,33,33,0.8);
+  cursor: url(../images/pointer.svg), pointer;
+}
+
+.profile__edit-button:hover{
+  color:rgba(33,33,33,1);
+  cursor: url(../images/pointer.svg), pointer;
 }
