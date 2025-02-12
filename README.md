@@ -25,3 +25,8 @@
 ## Plan on improving the project
 
 Working on the spots project I saw many great rooms for oppurtunities. I hope that in the future I can be able to give an option to be able to comment under the images of the users choice. I would also like to give a section to the top of the header to be able to potentiallty share specific items users may find interesting. 
+
+
+## Discriptive video
+
+https://drive.google.com/file/d/13kYgyw4-kl2pno5Yn4UwQ82gRqfWgSRH/view?usp=drive_link   
