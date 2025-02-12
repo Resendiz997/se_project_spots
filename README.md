@@ -29,4 +29,4 @@ Working on the spots project I saw many great rooms for oppurtunities. I hope th
 
 ## Discriptive video
 
-https://drive.google.com/file/d/13kYgyw4-kl2pno5Yn4UwQ82gRqfWgSRH/view?usp=drive_link   
+ https://drive.google.com/file/d/13kYgyw4-kl2pno5Yn4UwQ82gRqfWgSRH/view?usp=drive_link
