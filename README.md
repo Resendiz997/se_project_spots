@@ -1,5 +1,5 @@
 # Project 3: Spots
- 
+ - link: https://resendiz997.github.io/se_project_spots/ 
 
 **Intro**
   
