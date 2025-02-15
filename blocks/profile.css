@@ -88,27 +88,26 @@
   font-size: 20px;
   max-width: 288px;
   margin: 0;
+  line-height: 1;
 }
 .profile__description{
-max-width: 288px;
-margin: 6px 0 32px;
+ max-width: 420px;
+ margin: 6px 0 32px;
 }
 .profile__edit-button{
-margin: 0 auto;
+ margin: 0 auto;
 }
 .profile__add-button{
-  margin: 20px 0;
+  margin: 20px 0 0;
   width: 288px;
 }
 }
 .profile__add-button:hover{
-  background-color: rgb(33,33,33);
   opacity: 0.8;
   cursor:pointer;
 }
 
 .profile__edit-button:hover{
-  color:rgb(33,33,33);
   opacity: 1;
   cursor:pointer;
 }
