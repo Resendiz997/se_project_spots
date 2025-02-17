@@ -24,9 +24,11 @@
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   max-width: 420px;
+  line-height: 1;
  }
  .profile__description{
   margin:0;
+  max-width: 420px;
   font-family: "poppins",arial,sans-serif;
   font-weight: 500;
   color: #212121b2;
@@ -88,7 +90,6 @@
   font-size: 20px;
   max-width: 288px;
   margin: 0;
-  line-height: 1;
 }
 .profile__description{
  max-width: 420px;
