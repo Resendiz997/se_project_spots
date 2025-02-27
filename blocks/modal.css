@@ -10,6 +10,10 @@
   align-items: center;
   justify-content: center;
   padding: 0 16px;
+  visibility: hidden;
+}
+.modal_open{
+  visibility: visible;
 }
 .modal__container{
   background-color: rgba(255, 255, 255, 1);
