@@ -5,3 +5,17 @@ const initialCards =[
     {name:"A very long bridge, over the forest and through the trees",link:"https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/4-photo-by-maurice-laschet-from-pexels.jpg"},
     {name:"Tunnel with morning light",link:"https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/5-photo-by-van-anh-nguyen-from-pexels.jpg"},
     {name:"Mountain house",link:"https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"},];
+
+const editProfileModal = document.querySelector("#edit-profile-modal");
+
+const profileEditBtn = document.querySelector(".profile__edit-button");
+
+ profileEditBtn.addEventListener("click",function(){
+  editProfileModal.classList.add("modal_open");
+});
+
+const closeBtn = document.querySelector(".modal__close-btn");
+
+closeBtn.addEventListener("click", function(){
+  editProfileModal.classList.remove("modal_open");
+ });
