@@ -7,15 +7,52 @@ const initialCards =[
     {name:"Mountain house",link:"https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"},];
 
 const editProfileModal = document.querySelector("#edit-profile-modal");
+const modalNameInput = document.querySelector("#input-name");
+const modalDescriptionInput = document.querySelector("#input-description");
+const modalSubmitBtn = document.querySelector(".modal_submit-btn");
+const modalCloseBtn = document.querySelector(".modal__close-btn");
+const modalFormElement = editProfileModal.querySelector(".modal__form");
+
 
 const profileEditBtn = document.querySelector(".profile__edit-button");
+const profileTitle = document.querySelector(".profile__title");
+const profileDescription = document.querySelector(".profile__description");
+
+const cardTemplate = document.querySelector("#card-template");
+const cardsList = document.querySelector('.cards__list');
+
+function getCardElement(data){
+ const cardElement = cardTemplate.content.querySelector('.card').cloneNode(true);
+ const cardNameElement = document.querySelector('.card__title');
+ const cardImageElement = document.querySelector('.card__image');
+
+ cardNameElement.textContent = data.name;
+ cardImageElement.value = data.link;
+
+  return cardElement;
+}
 
  profileEditBtn.addEventListener("click",function(){
   editProfileModal.classList.add("modal_open");
+  modalNameInput.value = profileTitle.textContent;
+  modalDescriptionInput.value = profileDescription.textContent;
 });
 
-const closeBtn = document.querySelector(".modal__close-btn");
 
-closeBtn.addEventListener("click", function(){
+modalCloseBtn.addEventListener("click", function(){
   editProfileModal.classList.remove("modal_open");
  });
+
+function handleModalFormSubmit(evt) {
+ evt.preventDefault();
+ profileTitle.textContent = modalNameInput.value;
+ profileDescription.textContent = modalDescriptionInput.value;
+ modalCloseBtn();
+}
+
+modalFormElement.addEventListener("submit",handleModalFormSubmit);
+
+for (let i = 0; i < initialCards.length;i++){
+  const cardElement = getCardElement(initialCards[i]);
+  cardsList.prepend(cardElement);
+}

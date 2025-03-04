@@ -31,12 +31,14 @@
   </section>
   <section class="cards page__section">
     <ul class="cards__list">
+    <template id= #card-template>
     <li class="card">
-    <img src="./images/val.jpg " alt="Val thorens" class="card__image">
+    <img src="" alt="" class="card__image">
     <div class="card__content">
-      <h2 class="card__title">Val Thorens</h2>
+      <h2 class="card__title"></h2>
       <button type="button" class="card__like-button"></button>
     </div>
+  </template>
     </li>
     <li class="card">
     <img src="./images/restaurant.jpg" alt="restaurant" class="card__image">      <div class="card__content">
@@ -83,13 +85,13 @@
     <button type="submit" class="modal__close-btn"></button>
     <h2 class="modal__title">Edit Profile</h2>
     <form name=edit-profile class="modal__form">
-      <label for="name" class="modal__label">
+      <label for="input-name" class="modal__label">
         Name
-      <input type="text" id="name" placeholder="Type your name" class="modal__input" />
+      <input type="text" id="input-name" placeholder="Type your name" class="modal__input" />
       </label>
-     <label for="description" class="modal__label">
+     <label for="input-description" class="modal__label">
         Description
-      <input type="text" id="description" placeholder="Description" class="modal__input" />
+      <input type="text" id="input-description" placeholder="Description" class="modal__input" />
       </label>
       <button type="submit" class="modal__submit-btn"> Save</button>
     </form>
