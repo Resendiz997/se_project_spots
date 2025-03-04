@@ -23,11 +23,12 @@ const cardsList = document.querySelector('.cards__list');
 
 function getCardElement(data){
  const cardElement = cardTemplate.content.querySelector('.card').cloneNode(true);
- const cardNameElement = document.querySelector('.card__title');
- const cardImageElement = document.querySelector('.card__image');
+ const cardNameElement = cardElement.querySelector('.card__title');
+ const cardImageElement = cardElement.querySelector('.card__image');
 
  cardNameElement.textContent = data.name;
- cardImageElement.value = data.link;
+ cardImageElement.src = data.link , data.name;
+
 
   return cardElement;
 }
@@ -47,7 +48,7 @@ function handleModalFormSubmit(evt) {
  evt.preventDefault();
  profileTitle.textContent = modalNameInput.value;
  profileDescription.textContent = modalDescriptionInput.value;
- modalCloseBtn();
+ modalCloseBtn;
 }
 
 modalFormElement.addEventListener("submit",handleModalFormSubmit);
