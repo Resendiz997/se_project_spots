@@ -48,6 +48,11 @@ flex-direction: column;
   font-size: 16px;
   font-family:"poppins",arial,sans-serif;
 }
+
+.modal__submit-btn:hover{
+  cursor: pointer;
+}
+
 .modal__close-btn{
   position: absolute;
   height: 40px;

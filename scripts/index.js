@@ -27,28 +27,35 @@ function getCardElement(data){
  const cardImageElement = cardElement.querySelector('.card__image');
 
  cardNameElement.textContent = data.name;
- cardImageElement.src = data.link , data.name;
+ cardImageElement.src = data.link;
+ cardImageElement.alt = data.name;
 
 
   return cardElement;
 }
 
- profileEditBtn.addEventListener("click",function(){
+function openBtn (){
   editProfileModal.classList.add("modal_open");
+}
+
+
+ profileEditBtn.addEventListener("click", openBtn );{
   modalNameInput.value = profileTitle.textContent;
   modalDescriptionInput.value = profileDescription.textContent;
-});
+};
 
-
-modalCloseBtn.addEventListener("click", function(){
+function closeBtn(){
   editProfileModal.classList.remove("modal_open");
- });
+}
+
+
+modalCloseBtn.addEventListener("click",closeBtn);
 
 function handleModalFormSubmit(evt) {
  evt.preventDefault();
  profileTitle.textContent = modalNameInput.value;
  profileDescription.textContent = modalDescriptionInput.value;
- modalCloseBtn;
+ closeBtn();
 }
 
 modalFormElement.addEventListener("submit",handleModalFormSubmit);
