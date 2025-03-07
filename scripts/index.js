@@ -39,10 +39,7 @@ function openBtn (){
 }
 
 
- profileEditBtn.addEventListener("click", openBtn );{
-  modalNameInput.value = profileTitle.textContent;
-  modalDescriptionInput.value = profileDescription.textContent;
-};
+ profileEditBtn.addEventListener("click", openBtn );
 
 function closeBtn(){
   editProfileModal.classList.remove("modal_open");

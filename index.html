@@ -1,69 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>spots</title>
-  <meta name="author" content="Oscar Resendiz"/>
-  <meta name="description" content="new site allowing users to like,edit,comment,and upload an array of images"/>
-  <meta name="keywords" content= "bessie,images,spots"/>
-  <link href="pages/index.css" rel="stylesheet"/>
-  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
-</head>
-<body>
-  <div class="page">
-   <header class="header">
-    <img src="./images/Logo.svg" alt="spots logo" class="header__logo">
-  </header>
-  <main class="content">
-    <section class= "profile page__section">
-    <img src="./images/avatar.jpg" alt="Bessie coleman photo" class="profile__avatar">
-    <div class="profile__column">
-      <h1 class="profile__title">Bessie Coleman</h1>
-      <p class="profile__description">Civil Aviator</p>
-    <button type="button" class="profile__edit-button">
-      <img src="./images/Pencil.svg" alt="pencil"> Edit Button
-    </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>spots</title>
+    <meta name="author" content="Oscar Resendiz" />
+    <meta
+      name="description"
+      content="new site allowing users to like,edit,comment,and upload an array of images"
+    />
+    <meta name="keywords" content="bessie,images,spots" />
+    <link href="pages/index.css" rel="stylesheet" />
+    <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img src="./images/Logo.svg" alt="spots logo" class="header__logo" />
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="./images/avatar.jpg"
+            alt="Bessie coleman photo"
+            class="profile__avatar"
+          />
+          <div class="profile__column">
+            <h1 class="profile__title">Bessie Coleman</h1>
+            <p class="profile__description">Civil Aviator</p>
+            <button type="button" class="profile__edit-button">
+              <img src="./images/Pencil.svg" alt="pencil" /> Edit Button
+            </button>
+          </div>
+          <button type="button" class="profile__add-button">
+            <img src="./images/cross.svg" alt="cross" />New post
+          </button>
+        </section>
+        <section class="cards page__section">
+          <ul class="cards__list">
+            <template id="card-template">
+              <li class="card">
+                <img src="" alt="" class="card__image" />
+                <div class="card__footer">
+                  <h2 class="card__title"></h2>
+                  <button type="button" class="card__like-button"></button>
+                </div>
+              </li>
+            </template>
+          </ul>
+        </section>
+      </main>
+      <footer class="footer page__section">
+        <p class="footer__copyright">2024 &#169; spots</p>
+      </footer>
+      <div class="modal" id="edit-profile-modal">
+        <div class="modal__container">
+          <button type="button" class="modal__close-btn"></button>
+          <h2 class="modal__title">Edit Profile</h2>
+          <form name="edit-profile" class="modal__form">
+            <label for="input-name" class="modal__label">
+              Name
+              <input
+                type="text"
+                id="input-name"
+                placeholder="Type your name"
+                class="modal__input"
+              />
+            </label>
+            <label for="input-description" class="modal__label">
+              Description
+              <input
+                type="text"
+                id="input-description"
+                placeholder="Description"
+                class="modal__input"
+              />
+            </label>
+            <button type="submit" class="modal__submit-btn">Save</button>
+          </form>
+        </div>
+      </div>
     </div>
-    <button type="button" class="profile__add-button">
-      <img src="./images/cross.svg" alt="cross"/>New post
-      </button>
-  </section>
-  <section class="cards page__section">
-  <ul class="cards__list">
-    <template id= "card-template">
-    <li class="card">
-    <img src="" alt="" class="card__image">
-    <div class="card__footer">
-      <h2 class="card__title"></h2>
-      <button type="button" class="card__like-button"></button>
-    </div>
-    </li>
-  </template>
-  </ul>
-</section>
- </main>
- <footer class="footer page__section">
-  <p class="footer__copyright"> 2024 &#169; spots</p>
-    </footer>
-<div class="modal"  id= "edit-profile-modal">
-  <div class="modal__container">
-    <button type="button" class="modal__close-btn"></button>
-    <h2 class="modal__title">Edit Profile</h2>
-    <form name=edit-profile class="modal__form">
-      <label for="input-name" class="modal__label">
-        Name
-      <input type="text" id="input-name" placeholder="Type your name" class="modal__input" />
-      </label>
-     <label for="input-description" class="modal__label">
-        Description
-      <input type="text" id="input-description" placeholder="Description" class="modal__input" />
-      </label>
-      <button type="submit" class="modal__submit-btn"> Save</button>
-    </form>
-   </div>
-  </div>
-</div>
-<script src="../scripts/index.js" defer></script>
-</body>
+    <script src="../scripts/index.js" defer></script>
+  </body>
 </html>
