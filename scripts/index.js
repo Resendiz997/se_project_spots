@@ -36,6 +36,8 @@ function getCardElement(data){
 
 function openBtn (){
   editProfileModal.classList.add("modal_open");
+    modalNameInput.value = profileTitle.textContent;
+    modalDescriptionInput.value = profileDescription.textContent;
 }
 
 
