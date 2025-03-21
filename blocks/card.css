@@ -21,6 +21,11 @@
   max-width: 413px;
   position: relative;
   }
+
+.card_open{
+  visibility: visible;
+}
+
 .card__footer{
    display: flex;
    align-items: center;
