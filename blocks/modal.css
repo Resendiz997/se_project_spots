@@ -38,11 +38,10 @@
   margin: 0 auto;
   width: fit-content;
   position: relative;
-  /* padding-right: 50px; */
 }
 
 .modal__image{
-  max-width:80vw;
+  max-width:90vw;
   max-height: 80vh;
   border-radius: 8px;
 
@@ -158,7 +157,7 @@ flex-direction: column;
   padding:0 10px;
 }
 .modal__container{
-  padding: 12px;
+padding: 12px;
 }
 .modal__title{
   font-size: 20px;
@@ -189,7 +188,10 @@ flex-direction: column;
 
 @media screen and (max-width:360px){
   .modal__close-btn_type_preview{
-    top: -30px;
+    top: -50px;
     right: 5px;
   }
+.modal__container_type_preview{
+  padding: 0;
+}
 }
