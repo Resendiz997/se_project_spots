@@ -53,7 +53,8 @@ cardDeleteBtn.addEventListener("click", () => {
 });
 
 cardImageElement.addEventListener("click", () => {
-  previewModalImage.src =cardImageElement.src,cardImageElement.alt;
+  previewModalImage.src =cardImageElement.src;
+  previewModalImage.alt = cardImageElement.alt;
   previewModalCaption.textContent = cardNameElement.textContent;
   openModal(previewModal);
 });
