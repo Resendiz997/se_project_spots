@@ -134,6 +134,9 @@ flex-direction: column;
   cursor: pointer;
   }
 
+.modal__error{
+color:red;
+}
   .modal__label{
   font-family:"poppins",arial,sans-serif;
   display: flex;
