@@ -75,6 +75,12 @@ flex-direction: column;
   cursor: pointer;
 }
 
+.modal__submit-btn-disable{
+  background-color:grey;
+  border: grey ;
+}
+
+
 .modal__close-btn{
   position: absolute;
   height: 40px;
@@ -134,8 +140,15 @@ flex-direction: column;
   cursor: pointer;
   }
 
+.modal__input_type_error{
+border: 1px solid rgba(255,0,0,0.6);
+}
+
 .modal__error{
-color:red;
+ font-family:"poppins",arial,sans-serif;
+ color:rgba(255,0,0,.7);
+ font-weight:500;
+ size: 16px;
 }
   .modal__label{
   font-family:"poppins",arial,sans-serif;

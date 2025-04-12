@@ -30,7 +30,7 @@ const cardsList = document.querySelector('.cards__list');
 const addCardLinkInput = addProfileModal.querySelector("#add-card-link-input");
 const addCardCaptionInput = addProfileModal.querySelector("#input-caption");
 const previewModalCloseBtn = previewModal.querySelector(".modal__close-btn");
-
+const addModalBtn = addProfileModal.querySelector(".modal__submit-btn");
 
 function getCardElement(data){
  const cardElement = cardTemplate.content.querySelector('.card').cloneNode(true);
@@ -113,6 +113,7 @@ function addModalFormSubmit(evt) {
   const inputValues = {name: addCardCaptionInput.value , link: addCardLinkInput.value};
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
+  disableBtn(addModalBtn,settings);
   closeModal(addProfileModal);
   addCardCaptionInput.value = "";
   addCardLinkInput.value = "";
