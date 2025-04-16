@@ -119,4 +119,27 @@ function addModalFormSubmit(evt) {
   addCardLinkInput.value = "";
  }
 
-addModalFormElement.addEventListener("submit",addModalFormSubmit);
+addModalFormElement.addEventListener("submit",addModalFormSubmit) ;
+
+
+
+const modals = document.querySelectorAll('.modal');
+modals.forEach(modal => {
+ modal.addEventListener('click', (event) => {
+    if (
+      event.target.classList.contains('modal')
+    ) {
+      closeModal(modal);
+    }
+  });
+});
+
+
+document.addEventListener('keydown', (event) => {
+  if (event.key === "Escape") {
+    const openedModal = document.querySelector(".modal_open");
+    if (openedModal) {
+      closeModal(openedModal);
+    }
+  }
+});
