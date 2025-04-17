@@ -80,6 +80,7 @@ profileEditBtn.addEventListener("click", () => {
   modalNameInput.value = profileTitle.textContent;
   modalDescriptionInput.value = profileDescription.textContent;
   openModal(editProfileModal);
+  resetValidation(editModalFormElement, settings);
  });
 
 editModalCloseBtn.addEventListener("click",() => {
@@ -102,6 +103,7 @@ initialCards.forEach((card) => {
 
 profileAddBtn.addEventListener("click", () => {
   openModal(addProfileModal);
+  resetValidation(editModalFormElement, settings);
 });
 
 addModalCloseBtn.addEventListener("click", () => {
@@ -143,3 +145,15 @@ document.addEventListener('keydown', (event) => {
     }
   }
 });
+
+function handleEscape(evt) {
+  if (evt.key === 'Escape') {
+    const openedPopup = document.querySelector(".modal_open ");
+    function openModal(modal){
+        document.addEventListener('keydown', handleEscape);
+    };
+    function closeModal(modal){
+      document.removeEventListener('keydown', handleEscape);
+    };
+  };
+};

@@ -40,8 +40,8 @@
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
-                <button type="button" class= "card__delete-button"></button>
-                <img src="" alt="" class="card__image"/>
+                <button type="button" class="card__delete-button"></button>
+                <img src="" alt="" class="card__image" />
                 <div class="card__footer">
                   <h2 class="card__title"></h2>
                   <button type="button" class="card__like-button"></button>
@@ -70,7 +70,7 @@
                 minlength="2"
                 maxlength="40"
               />
-            <span id= "input-name-error" class="modal__error"></span>
+              <span id="input-name-error" class="modal__error"></span>
             </label>
             <label for="input-description" class="modal__label">
               Description
@@ -83,13 +83,13 @@
                 minlength="2"
                 maxlength="200"
               />
-              <span id= "input-description-error" class="modal__error"></span>
+              <span id="input-description-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
-    <div class="modal" id="add-profile-modal">
+      <div class="modal" id="add-profile-modal">
         <div class="modal__container">
           <button type="button" class="modal__close-btn"></button>
           <h2 class="modal__title">New post</h2>
@@ -102,8 +102,8 @@
                 placeholder="Place a link to the picture"
                 class="modal__input"
                 required
-                />
-            <span id= "add-card-link-input-error" class="modal__error"></span>
+              />
+              <span id="add-card-link-input-error" class="modal__error"></span>
             </label>
             <label for="input-caption" class="modal__label">
               Caption
@@ -116,27 +116,24 @@
                 minlength="2"
                 maxlength="30"
               />
-            <span id= "input-caption-error" class="modal__error"></span>
+              <span id="input-caption-error" class="modal__error"></span>
             </label>
             <button type="submit" class="modal__submit-btn">Save</button>
           </form>
         </div>
       </div>
-     </div>
-  <div class="modal" id="preview-modal">
-    <div class="modal__container modal__container_type_preview">
-      <button
-       class="modal__close-btn modal__close-btn_type_preview"
-       type="button"
-       ></button>
-        <img
-        src=""
-        alt=""
-        class="modal__image"/>
-       <p class="modal__caption"></p>
-   </div>
-  </div>
-  <script src="../scripts/validation.js"></script>
-  <script src="../scripts/index.js"></script>
+    </div>
+    <div class="modal" id="preview-modal">
+      <div class="modal__container modal__container_type_preview">
+        <button
+          class="modal__close-btn modal__close-btn_type_preview"
+          type="button"
+        ></button>
+        <img src="" alt="" class="modal__image" />
+        <p class="modal__caption"></p>
+      </div>
+    </div>
+    <script src="../scripts/validation.js"></script>
+    <script src="../scripts/index.js"></script>
   </body>
 </html>

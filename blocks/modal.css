@@ -75,7 +75,7 @@ flex-direction: column;
   cursor: pointer;
 }
 
-.modal__submit-btn-disable{
+.modal__submit-btn_disable{
   background-color:grey;
   border: grey ;
 }

@@ -27,9 +27,18 @@ const hasInvalidInput = (inputList) =>{
  });
 };
 
+function resetValidation (formEl,config){
+ const inputList = Array.from(formEl.querySelectorAll(config,inoutSelector));
+ inputList.forEach((inputEl) => {
+  hideInputError(formEl,inputEl,config)
+ });
+const formSubmitBtn = formEl.querySelector(config.submitButtonSelector);
+toggleButtonState(inputList, formSubmitBtn, config);
+};
+
 const toggleButtonState = (inputList, formSubmitBtn,config) => {
  if (hasInvalidInput(inputList)){
- disableBtn(formSubmitBtn,config);
+   disableBtn(formSubmitBtn,config);
  }
  else {
   formSubmitBtn.disabled=false;
@@ -47,6 +56,10 @@ const setEventListener = (formEl,config) =>{
   const formSubmitBtn = formEl.querySelector(config.submitButtonSelector);
 
 toggleButtonState(inputList,formSubmitBtn,config);
+
+formEl.addEventListener("reset", () => {
+  disableBtn(formSubmitBtn, config);
+});
 
 inputList.forEach((inputEl) => {
   inputEl.addEventListener("input", function () {
@@ -67,7 +80,7 @@ const settings = {
   formSelector: ".modal__form",
   inputSelector: ".modal__input",
   submitButtonSelector: ".modal__submit-btn",
-  inactiveButtonClass: "modal__submit-btn-disable",
+  inactiveButtonClass: "modal__submit-btn_disable",
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible"
 }
