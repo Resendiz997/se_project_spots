@@ -66,15 +66,16 @@ previewModalCloseBtn.addEventListener("click",() => {
   closeModal(previewModal);
 });
 
-
-
-function openModal (modal){
+function openModal(modal) {
   modal.classList.add("modal_open");
+  document.addEventListener('keydown', handleEscape);
 }
 
-function closeModal (modal){
-  modal.classList.remove("modal_open");
+function closeModal(modal) {
+modal.classList.remove("modal_open");
+document.removeEventListener('keydown', handleEscape);
 }
+
 
 profileEditBtn.addEventListener("click", () => {
   modalNameInput.value = profileTitle.textContent;
@@ -103,7 +104,6 @@ initialCards.forEach((card) => {
 
 profileAddBtn.addEventListener("click", () => {
   openModal(addProfileModal);
-  resetValidation(editModalFormElement, settings);
 });
 
 addModalCloseBtn.addEventListener("click", () => {
@@ -148,7 +148,7 @@ document.addEventListener('keydown', (event) => {
 
 function handleEscape(evt) {
   if (evt.key === 'Escape') {
-    const openedPopup = document.querySelector(".modal_open ");
+    const openedPopup = document.querySelector(".modal_open");
     function openModal(modal){
         document.addEventListener('keydown', handleEscape);
     };

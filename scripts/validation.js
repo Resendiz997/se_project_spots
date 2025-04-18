@@ -28,7 +28,7 @@ const hasInvalidInput = (inputList) =>{
 };
 
 function resetValidation (formEl,config){
- const inputList = Array.from(formEl.querySelectorAll(config,inoutSelector));
+ const inputList = Array.from(formEl.querySelectorAll(config,inputSelector));
  inputList.forEach((inputEl) => {
   hideInputError(formEl,inputEl,config)
  });
