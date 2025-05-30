@@ -1,3 +1,28 @@
+import "./index.css";
+import { enableValidation,settings,disableBtn} from "../scripts/validation.js";
+
+import avatarSrc from "../images/avatar.jpg";
+
+const avatarImg = document.getElementById("bessieAvatar");
+avatarImg.src = avatarSrc;
+
+import crossLogoSrc from "../images/Logo.svg";
+
+const crossLogoImg = document.getElementById("cross-logo");
+crossLogoImg.src = crossLogoSrc;
+
+
+import editPencilSrc from "../images/Pencil.svg";
+
+const pencilImg = document.getElementById("edit-pencil");
+pencilImg.src = editPencilSrc;
+
+
+import addCrossSrc from "../images/cross.svg";
+
+const addCrossImg = document.getElementById("add-cross");
+addCrossImg.src = addCrossSrc;
+
 const initialCards = [
   {
     name: "Val Thorens",
@@ -163,4 +188,6 @@ function handleEscape(evt) {
     }
   }
 }
+
+enableValidation(settings);
 

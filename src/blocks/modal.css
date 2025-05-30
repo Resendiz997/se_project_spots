@@ -74,6 +74,9 @@ flex-direction: column;
 .modal__submit-btn:hover{
   cursor: pointer;
 }
+.modal__submit-btn:hover:not(.modal__submit-btn_disable) {
+  opacity: 0.8;
+}
 
 .modal__submit-btn_disable{
   background-color:grey;
