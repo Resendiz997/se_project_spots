@@ -84,3 +84,10 @@ export const settings = {
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible"
 }
+<<<<<<< HEAD
+=======
+
+enableValidation(settings);
+
+export { enableValidation,settings,disableBtn,resetValidation};
+>>>>>>> a104896 (first submission)
