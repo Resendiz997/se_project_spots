@@ -27,7 +27,7 @@ const hasInvalidInput = (inputList) =>{
  });
 };
 
-function resetValidation (formEl,config){
+export function resetValidation (formEl,config){
  const inputList = Array.from(formEl.querySelectorAll(config. inputSelector));
  inputList.forEach((inputEl) => {
   hideInputError(formEl,inputEl,config)
@@ -84,10 +84,3 @@ export const settings = {
   inputErrorClass: "modal__input_type_error",
   errorClass: "modal__error_visible"
 }
-<<<<<<< HEAD
-=======
-
-enableValidation(settings);
-
-export { enableValidation,settings,disableBtn,resetValidation};
->>>>>>> a104896 (first submission)
